@@ -155,7 +155,7 @@ class RBCassandra {
         return this.store.getTableSchema(domain, req.params.table)
         .then((res) => ({
             status: 200,
-            headers: { etag: res.tid.toString() },
+            // headers: { etag: res.tid.toString() },
             body: res.schema
         }))
         .catch((e) => ({

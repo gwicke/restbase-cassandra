@@ -7,7 +7,6 @@ var assert = require('assert');
 var dbu = require('../../lib/dbutils');
 
 var testTable0a = {
-    domain: 'restbase.cassandra.test.local',
     table: 'testTable0',
     options: { durability: 'low' },
     attributes: {
@@ -45,7 +44,6 @@ var testTable0b = {
         comment: 'string',
         tags: 'set<string>'
     },
-    domain: 'restbase.cassandra.test.local',
     secondaryIndexes: {
         by_rev : [
             { attribute: 'rev', type: 'hash' },
